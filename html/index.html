@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pet house</title>
+
+	<link rel="stylesheet" href="css.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+
+	
+</style>
+</head>
+<body>
+
+
+	<div id="navbar">
+		<a href="#inicio">Inicio</a>
+		<a href="#somos">¿Quiénes somos?</a>
+		<a href="#servicios">Serivicos</a>
+		<a href="#contact">Contáctanos</a>
+
+	</div>
+
+	<div class="content">
+
+
+		<div class="header" id="inicio">
+			<h1> <br>Pet house</h1>
+			<p>Expertos en el cuidado de tu perro.</p>
+			<img id="fondo" src="img/fondo.webp">
+		</div>
+
+		<div id="somos">
+			<div class="row center-xs">
+				<div class="col-xs-6">
+					<div class="box">
+						<h1>¿Quienes somos?</h1>
+						<div class="colC">Empresa <br> <em> 100% orignaria de Nayarit,  <abbr> Nay</abbr></em>. Dedicada al cuidado de tu mejor amigo en 4 patas. <br> <cite> El perro es el mejor amigo del hombre</cite> </h1></div>
+
+						<div id="qs"> 
+							<img id="pug2" src="img/pug2.png" alt="Perro con cara de WHAT"> 
+							<img id="pug1" src="img/pug.png" alt="Perro con cara de WHAT">  
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="servicios">
+			<h1> <br>Nuestros servicios</h1>				
+			<div class="wrapper" id="servers">
+				<div class="boxx">
+					<h1 class="hbox" >Corte de pelo</h1>         
+					<strong>Ofrecemos el mejor corte de pelo para tu amigo en 4 patas.</strong>
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=8qkcmUcuUVg">Ver más</a>
+				</div>
+				<div class="boxx">
+					<h1 class="hbox" >Baño 4x4</h1>         
+					<strong>Ofrecemos un baño único y diferente para tu amigo en 4 patas.</strong>
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=ciG7Ron-XJ8">Ver más</a>
+				</div>
+				<div class="boxx">
+					<h1 class="hbox" >Lavado de diente</h1>         
+					<strong>Ofrecemos una limpieza total de dientes para tu amigo en 4 patas.</strong>
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=0YVr93ztsGE">Ver más</a>
+				</div>
+				<div class="boxx">
+					<h1 class="hbox" >Corte de uña</h1>         
+					<strong>Ofrecemos un corte y ligadas de uña para tu amigo en 4 patas.</strong>
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=yv9mUHli8k0">Ver más</a>
+				</div>
+			</div>
+		</div>
+
+		<footer id="contact">
+			<div class="row" >
+				<div class="col-md-6 col-md-offset-3" id="form_container">
+					<h1 class="hbox">Contactanos para agendarte</h1>
+					<p>
+					</p>
+					<form name="myForm"  onsubmit="return validateForm()" method="post">
+						Name: <input type="text" name="fname">
+						Correo: <input type="text" name="fcorreo">
+						Telefono: <input type="text" name="ftelefono">
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</footer>
+
+
+	</div>
+
+	<noscript>Lo sentimos, tu navegador no soporta JS </noscript>
+
+
+	<script>
+
+		window.onscroll = function() {myFunction()}; //JS para que el menu se mueva y se quede arriba siempre
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+		function myFunction() {
+			if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky")
+			} else {
+				navbar.classList.remove("sticky"); 
+			}
+		} //JS para que el menu se mueva y se quede arriba siempre
+
+
+		
+		function validateForm() {	//JS para validar el cuestionario de contactanos
+			var x = document.forms["myForm"]["fname"].value;
+			if (x == "") {
+				alert("Ingresa tu nombre");
+				return false;
+			}
+			var y = document.forms["myForm"]["fcorreo"].value;
+			if (y == "") {
+				alert("Ingresa tu correo");
+				return false;
+			}
+			var z = document.forms["myForm"]["ftelefono"].value;
+			if (z == "") {
+				alert("Ingresa tu telefono");
+				return false;
+			}
+		}	//JS para validar el cuestionario de contactanos
+
+	</script>
+
+</body>
+</html>
